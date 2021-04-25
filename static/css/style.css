@@ -1,0 +1,125 @@
+@import url('//fonts.googleapis.com/css?family=Bungee+Shade');
+:root{
+    --blue: #25294A;
+    --lightblue: #6dcad4;
+    --black: #000000;
+    --white: #FFFFFF;
+    --gray: #d8d4d2;
+    --darkgray: #cfcbcb;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+body{
+    background-color: var(--gray);
+}
+/* -------------------       Menu      ---------------------*/
+.navbar{
+    background-color: var(--blue);
+}
+.navbar-item{
+    padding: 0;
+    margin: auto;
+    max-width: 1500px;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    text-align: center;
+}
+.item{
+    background-color: cornflowerblue;
+    flex-grow: 1;
+    min-width: 200px;
+}
+.item-link{
+    background-color: var(--blue);
+    display: block;
+    color: var(--white); 
+    text-decoration: none;
+    padding: 10px;
+}
+.item-link:hover{
+    background-color: var(--white);
+    color: var(--blue);
+}
+/* -------------------       header o portada       ---------------------*/
+.header{
+    background-color: var(--blue);
+    padding: 60px 0;
+    color: var(--white);
+    margin-top: 0px ;
+    text-align: center;
+
+}    
+.header-title{
+    font-size: 50px;
+}
+.header-text{
+    font-size: 24px;    
+}
+/* -------------------       Contenedor       ---------------------*/
+.container{
+    background-color: var(--gray);
+}
+/* -------------------      Subtitulos      ---------------------*/
+.subtitle{
+    background-color: var(--darkgray);
+    text-align: center;
+    padding: 10px 0;
+}
+.subtitle-text{
+    text-decoration: none;
+    color: var(--black);
+    text-transform: uppercase;
+    letter-spacing: 1pt;
+    margin-bottom: 15px;
+    border-bottom: 2px solid var(--blue);
+}
+/* -------------------       Proyectos      ---------------------*/
+/* -------------------       Cards       ---------------------*/
+.card{
+    max-width: 1800px;
+    margin: 15px auto;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;   
+}
+.about{
+    background-color: var(--lightblue);
+}
+.card-img{
+    margin: 10px;
+}
+.card-body{
+    background-color: var(--lightblue);
+    max-width: 60%;
+    margin: 10px;
+}
+.card-title{
+    font-size: 24px;   
+    margin: 15px 0 0 15px;
+    color: var(--black);
+}
+.card-text{
+    padding: 15px;
+    text-align: justify;
+    color: var(--black);
+}
+/* -------------------       Habilidades      ---------------------*/
+.habilidad{
+    background-color: yellow;
+    max-width: 80%;
+    margin: 15px auto;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.icon-habilidad {
+    
+  }
+
+/* -------------------       Contacto       ---------------------*/

@@ -109,9 +109,27 @@ body{
     text-align: justify;
     color: var(--black);
 }
+.btn{
+    background-color: var(--white);
+    max-width: 190px;
+    margin: auto;
+    display: block;
+    padding: 10px;
+    text-decoration: none;    
+    border: 2px solid var(--white);
+    border-radius: 10px;
+    background-color: transparent;
+}
+.btn:hover{
+    background-color: var(--gray);
+    border: 2px solid var(--blue);
+    border-radius: 10px;
+}
+.btn-img{
+    margin: -10px 25px;
+}
 /* -------------------       Habilidades      ---------------------*/
 .habilidad{
-    background-color: yellow;
     max-width: 80%;
     margin: 15px auto;
     display: flex;
@@ -119,7 +137,26 @@ body{
     flex-wrap: wrap;
 }
 .icon-habilidad {
-    
+    margin: 20px 40px;
   }
 
 /* -------------------       Contacto       ---------------------*/
+.contacto{
+    max-width: 80%;
+    margin: auto;
+}
+.list-redes{
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.red-img{
+    margin: 30px auto;
+    filter: saturate(10%) brightness(80%) contrast(80%);
+    transition: all .6s cubic-bezier(.19,1,.22,1);
+}
+.red-img:hover{
+    transform: translateY(-10px);
+    filter: unset;
+}

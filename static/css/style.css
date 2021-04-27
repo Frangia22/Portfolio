@@ -119,11 +119,13 @@ body{
     border: 2px solid var(--white);
     border-radius: 10px;
     background-color: transparent;
+    color: var(--white);
 }
 .btn:hover{
     background-color: var(--gray);
     border: 2px solid var(--blue);
     border-radius: 10px;
+    color: var(--blue);
 }
 .btn-img{
     margin: -10px 25px;
@@ -152,11 +154,20 @@ body{
     flex-wrap: wrap;
 }
 .red-img{
-    margin: 30px auto;
+    margin: 50px auto;
     filter: saturate(10%) brightness(80%) contrast(80%);
     transition: all .6s cubic-bezier(.19,1,.22,1);
 }
 .red-img:hover{
     transform: translateY(-10px);
     filter: unset;
+}
+/* -------------------       Footer       ---------------------*/
+footer .container{
+    background-color: var(--darkgray);
+}
+.foo-text{
+    text-align: center;
+    padding: 15px 0;
+    font-weight: bold;
 }

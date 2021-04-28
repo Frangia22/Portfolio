@@ -1,4 +1,4 @@
-@import url('//fonts.googleapis.com/css?family=Bungee+Shade');
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@300&display=swap');
 :root{
     --blue: #25294A;
     --lightblue: #6dcad4;
@@ -15,6 +15,7 @@
 }
 body{
     background-color: var(--gray);
+    font-family: 'Exo 2', sans-serif;
 }
 /* -------------------       Menu      ---------------------*/
 .navbar{
@@ -93,10 +94,13 @@ body{
 }
 .card-img{
     margin: 10px;
+    width: 600px;
+}
+.card-img.img-mobile{
+    max-width: 90%;
 }
 .card-body{
-    background-color: var(--lightblue);
-    max-width: 60%;
+    min-width: 50%;
     margin: 10px;
 }
 .card-title{
@@ -108,11 +112,12 @@ body{
     padding: 15px;
     text-align: justify;
     color: var(--black);
+    font-size: 18px;
 }
 .btn{
     background-color: var(--white);
-    max-width: 190px;
-    margin: auto;
+    max-width: 200px;
+    margin: 20px;
     display: block;
     padding: 10px;
     text-decoration: none;    

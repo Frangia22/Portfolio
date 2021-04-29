@@ -6,6 +6,7 @@
     --white: #FFFFFF;
     --gray: #d8d4d2;
     --darkgray: #cfcbcb;
+    --gradiantfond: rgb(217, 229, 234);
 }
 *{
     margin: 0;
@@ -14,7 +15,7 @@
     
 }
 body{
-    background-color: var(--gray);
+    background-color: var(--gradiantfond);
     font-family: 'Exo 2', sans-serif;
 }
 /* -------------------       Menu      ---------------------*/
@@ -46,6 +47,7 @@ body{
 .item-link:hover{
     background-color: var(--white);
     color: var(--blue);
+    font-weight: bold;
 }
 /* -------------------       header o portada       ---------------------*/
 .header{
@@ -64,7 +66,7 @@ body{
 }
 /* -------------------       Contenedor       ---------------------*/
 .container{
-    background-color: var(--gray);
+    background-color: var(--gradiantfond);
 }
 /* -------------------      Subtitulos      ---------------------*/
 .subtitle{
@@ -90,7 +92,7 @@ body{
     flex-wrap: wrap;   
 }
 .about{
-    background-color: var(--lightblue);
+    flex: 1 1;
 }
 .card-img{
     margin: 10px;
@@ -101,7 +103,7 @@ body{
 }
 .card-body{
     min-width: 50%;
-    margin: 10px;
+    margin: auto;
 }
 .card-title{
     font-size: 24px;   

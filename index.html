@@ -5,20 +5,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="static/css/style.css">
+    <link rel="shortcut icon" href="/static/img/fg-dev.svg" type="image/x-icon">
     <title>Fran Giachero | Desarrollo Web</title>
 </head>
 <body>
-    <nav class="navbar">
+    <header class="header">
+        <div class="skip">
+            <a href="#nav" class="sr-only">Skip to navigation</a>
+            <a href="#content" class="sr-only">Skip to content</a>
+            <a href="#my-contact" class="sr-only">Skip to footer</a>
+        </div>
+        <div id="appW" class="wheatherNow">
+            
+        </div>
+    </header>
+    <button class="btn-menu" type="submit" id="menubtn">
+        <span id="changeIcon" class="burger-menu"></span>
+    </button>
+    <nav class="navbar" id="nav">
         <ul class="navbar-item">
             <li class="item"><a class="item-link" href="#my-projects">Proyectos</a></li>
             <li class="item"><a class="item-link" href="#my-skills">Habilidades</a></li>
             <li class="item"><a class="item-link" href="#my-contact">Contacto</a></li>            
         </ul>
     </nav>
-    <header class="header">
-        <h1 class="header-title" id="messagetitle">Francisco Giachero</h1>
-        <p class="header-text" id="messagetext">Desarrollador web FullStack</p>
-    </header>
+    <div class="cover">
+        <h1 class="cover-title" id="messagetitle">Francisco Giachero</h1>
+        <p class="cover-text" id="messagetext">Desarrollador web FullStack</p>
+    </div>
     <section id="my-description">
         <div class="container">
             <div class="subtitle">
@@ -33,6 +47,7 @@
                         de trabajar en equipo.
                         Actualmente estoy estudiando nuevas tecnologias y en busca de trabajo.
                     </p>
+                    <h3 class="card-text-footer">"Perseveras y triunfaras"</h3>
                 </div>
             </div>            
         </div>
@@ -41,7 +56,25 @@
         <div class="container">
             <div class="subtitle">
                 <h2><a href="" class="subtitle-text" id="subtitle">Proyectos</a></h2>
-            </div>            
+            </div>  
+            <div class="card">
+                <img class="card-img img-mobile" src="static/img/Optometria.jpg" alt="Proyecto 1">
+                <div class="card-body">
+                    <h3 class="card-title">Gordini Wines</h3>
+                    <p class="card-text">Web dinamica desarrollada en Html, Css, Js, Nodejs, 
+                        Express, Mysql y Sequelize.</p>
+                    <a href="https://github.com/Frangia22/HerreriaSGlbye.github.io" class="btn">Source Code<img class="btn-img" src="static/img/github-32x32.ico" alt=""></a>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-body">
+                    <h3 class="card-title">Luz y Fuerza Laboulaye</h3>
+                    <p class="card-text">Web corporativa dinamica, para gestion de turnos de 
+                        canchas desarrollada en Html, Css, Js, Python, Django y Sqlite.</p>
+                    <a href="https://github.com/Frangia22/HerreriaSGlbye.github.io" class="btn">Source Code<img class="btn-img" src="static/img/github-32x32.ico" alt=""></a>
+                </div>
+                <img class="card-img img-mobile" src="static/img/linksmanager.png" alt="Proyecto 1">
+            </div>        
             <div class="card">
                 <img class="card-img img-mobile" src="static/img/herreriasg.png" alt="Proyecto 1">
                 <div class="card-body">
@@ -51,12 +84,12 @@
                 </div>
             </div>
             <div class="card">
-                    <img class="card-img img-mobile" src="static/img/Optometria.jpg" alt="Proyecto 2">                
                 <div class="card-body">
                     <h3 class="card-title">Opto LBYE</h3>
                     <p class="card-text">Sistema de gestion de consultas, turnos y pedidos con Django y Python.</p>
                     <a href="https://github.com/Frangia22/OptoLBYE" class="btn">Source Code<img class="btn-img" src="static/img/github-32x32.ico" alt=""></a>
                 </div>
+                <img class="card-img img-mobile" src="static/img/Optometria.jpg" alt="Proyecto 2">                
             </div>
             <div class="card">
                 <img class="card-img img-mobile" src="static/img/linksmanager.png" alt="Proyecto 3">
@@ -75,37 +108,49 @@
             </div>
             <div class="habilidad">
                 <figure class="icon-habilidad">
-                    <img class="hab-img" src="static/img/html-black.png" alt="Habilidad">
+                    <img class="hab-img" src="static/img/html-black.png" alt="Html">
                 </figure>
                 <figure class="icon-habilidad">
-                    <img class="hab-img" src="static/img/css-black.png" alt="Habilidad">
+                    <img class="hab-img" src="static/img/css-black.png" alt="Css">
                 </figure>
                 <figure class="icon-habilidad">
-                    <img class="hab-img" src="static/img/mysql-black.png" alt="Habilidad">
+                    <img class="hab-img" src="static/img/mysql-black.png" alt="Mysql">
                 </figure>
                 <figure class="icon-habilidad">
-                    <img class="hab-img" src="static/img/php-black.png" alt="Habilidad">
+                    <img class="hab-img" src="static/img/php-black.png" alt="Php">
                 </figure>
                 <figure class="icon-habilidad">
-                    <img class="hab-img" src="static/img/bootstrap-black.png" alt="Habilidad">
+                    <img class="hab-img" src="static/img/bootstrap-black.png" alt="Bootstrap">
                 </figure>
                 <figure class="icon-habilidad">
-                    <img class="hab-img" src="static/img/python-black.png" alt="Habilidad">
+                    <img class="hab-img" src="static/img/python-black.png" alt="Python">
                 </figure>
                 <figure class="icon-habilidad">
-                    <img class="hab-img" src="static/img/django-black.png" alt="Habilidad">
+                    <img class="hab-img" src="static/img/django-black.png" alt="Django">
                 </figure>
                 <figure class="icon-habilidad">
-                    <img class="hab-img" src="static/img/js-black.png" alt="Habilidad">
+                    <img class="hab-img" src="static/img/js-black.png" alt="JavaScript">
                 </figure>
                 <figure class="icon-habilidad">
-                    <img class="hab-img" src="static/img/git-black.png" alt="Habilidad">
+                    <img class="hab-img" src="static/img/git-black.png" alt="Git">
                 </figure>
                 <figure class="icon-habilidad">
-                    <img class="hab-img" src="static/img/github-black.png" alt="Habilidad">
+                    <img class="hab-img" src="static/img/github-black.png" alt="Github">
                 </figure>
                 <figure class="icon-habilidad">
-                    <img class="hab-img" src="static/img/arduino-black.png" alt="Habilidad">
+                    <img class="hab-img" src="static/img/sqlite-black.png" alt="Sqlite">
+                </figure>
+                <figure class="icon-habilidad">
+                    <img class="hab-img" src="static/img/npm-black.png" alt="Npm">
+                </figure>
+                <figure class="icon-habilidad">
+                    <img class="hab-img" src="static/img/node-black.png" alt="Node JS">
+                </figure>
+                <figure class="icon-habilidad">
+                    <img class="hab-img" src="static/img/angular-black.png" alt="Angular">
+                </figure>
+                <figure class="icon-habilidad">
+                    <img class="hab-img" src="static/img/sass-black.png" alt="Sass">
                 </figure>
             </div>
         </div>
@@ -123,6 +168,9 @@
                     <li class="red-item"><a href="https://github.com/Frangia22"><img class="red-img" src="static/img/github-64x64.png" alt="Frangia22"></a></li>
                     <li class="red-item"><a href="static/doc/CV_2021-Developer.pdf"><img class="red-img" src="static/img/cv.png" alt="Curriculum vitae"></a></li>
                 </ul>
+            </div>
+            <div class="return">
+                <a href="#nav"><img src="https://img.icons8.com/material-outlined/48/000000/send-letter.png"/></a>
             </div>
         </div>
     </section>

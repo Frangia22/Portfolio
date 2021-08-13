@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@300&display=swap');
+/* -------------------------------- Variables -------------------------------- */
 :root{
     --blue: #25294A;
     --lightblue: #6dcad4;
@@ -7,7 +8,8 @@
     --gray: #d8d4d2;
     --darkgray: #cfcbcb;
     --gradiantfond: rgb(217, 229, 234);
-}
+} 
+/* -------------------------------- Generales ----------------------------------------------------*/
 *{
     margin: 0;
     padding: 0;
@@ -18,7 +20,39 @@ body{
     background-color: var(--gradiantfond);
     font-family: 'Exo 2', sans-serif;
 }
+img{
+    max-width: 100%;
+}
+/* ------------------- Skip / to navigation ------------------- */
+/*-------------------------------- Header / Skip navigation ---------------------------*/
+.header{
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    margin: 15px 0;
+}
+.sr-only{
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px 1px 1px 1px);
+    clip: rect(1px, 1px, 1px, 1px);
+    white-space: nowrap;
+    top: 0;
+}
+.sr-only:focus{
+    background-color: var(--blue);
+    color: var(--white);
+    padding: 5px;
+    width: auto;
+    height: auto;
+    clip: auto;
+}
 /* -------------------       Menu      ---------------------*/
+.btn-menu {
+    display: none;
+}
 .navbar{
     background-color: var(--blue);
 }
@@ -33,7 +67,6 @@ body{
     text-align: center;
 }
 .item{
-    background-color: cornflowerblue;
     flex-grow: 1;
     min-width: 200px;
 }
@@ -45,23 +78,23 @@ body{
     padding: 10px;
 }
 .item-link:hover{
-    background-color: var(--white);
-    color: var(--blue);
     font-weight: bold;
+    animation: 2s subrayadoin;
 }
 /* -------------------       header o portada       ---------------------*/
-.header{
-    background-color: var(--blue);
+.cover{
+    background-image: url(/static/img/pattern2.svg);
     padding: 60px 0;
     color: var(--white);
     margin-top: 0px ;
     text-align: center;
-
+    background-color: var(--blue);
+    background-blend-mode: overlay;
 }    
-.header-title{
+.cover-title{
     font-size: 50px;
 }
-.header-text{
+.cover-text{
     font-size: 24px;    
 }
 /* -------------------       Contenedor       ---------------------*/
@@ -85,25 +118,22 @@ body{
 /* -------------------       Proyectos      ---------------------*/
 /* -------------------       Cards       ---------------------*/
 .card{
-    max-width: 1800px;
+    background-color: #f4efef85;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
     margin: 15px auto;
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;   
 }
 .about{
     flex: 1 1;
 }
 .card-img{
-    margin: 10px;
+    margin: 10px auto;
     width: 600px;
-}
-.card-img.img-mobile{
-    max-width: 90%;
+    object-fit: contain;
+    border-radius: 5px;
 }
 .card-body{
-    min-width: 50%;
-    margin: auto;
+    margin: auto 10px;
 }
 .card-title{
     font-size: 24px;   
@@ -116,26 +146,35 @@ body{
     color: var(--black);
     font-size: 18px;
 }
+.card-text-footer {
+    text-align: center;
+    margin: 25px 0;
+}
 .btn{
-    background-color: var(--white);
-    max-width: 200px;
-    margin: 20px;
-    display: block;
-    padding: 10px;
-    text-decoration: none;    
-    border: 2px solid var(--white);
+    align-items: center;
+    border: 2px solid var(--black);
     border-radius: 10px;
     background-color: transparent;
-    color: var(--white);
+    color: var(--black);
+    display: flex;
+    justify-content: space-between;
+    text-decoration: none;
+    padding: 12px 5px;
+    margin: 20px;
+    max-width: 200px;
 }
 .btn:hover{
-    background-color: var(--gray);
-    border: 2px solid var(--blue);
+    background-color: var(--black);
+    border: 2px solid var(--black);
     border-radius: 10px;
-    color: var(--blue);
+    color: var(--white);
+    font-weight: bold;
 }
 .btn-img{
     margin: -10px 25px;
+    background-color: white;
+    border-radius: 20px;
+    border: none;
 }
 /* -------------------       Habilidades      ---------------------*/
 .habilidad{
@@ -169,6 +208,13 @@ body{
     transform: translateY(-10px);
     filter: unset;
 }
+.return {
+    display: flex;
+    justify-content: flex-end;
+    margin: 10px;
+    position: relative;
+    bottom: 0;
+}
 /* -------------------       Footer       ---------------------*/
 footer .container{
     background-color: var(--darkgray);
@@ -177,4 +223,77 @@ footer .container{
     text-align: center;
     padding: 15px 0;
     font-weight: bold;
+}
+@media (max-width: 767px) {
+    /*------------------- Header --------------------------------*/
+    .header {
+        display: none;
+    }
+    /*------------------------------------- Nav ----------------------------------------------*/
+    .btn-menu{
+        background-color: var(--blue);
+        border: none;
+        display: block;
+        text-align: left;
+        width: 100%;
+    }
+    .burger-menu{
+        background-image: url(/static/img/menu.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        display: inline-block;
+        height: 2.5em;
+        margin: 5px;
+        vertical-align: middle;
+        width: 2.5em;
+    }
+    .burger-cruz{
+        background-image: url(/static/img/cruz.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        display: inline-block;
+        height: 2.5em;
+        margin: 5px;
+        vertical-align: middle;
+        width: 2.5em;
+    }
+    .navbar{
+        display: none;
+    }
+    .desplegar{
+        display: block;
+    }
+    .list-item-link{
+        font-size: 1.4em;
+    }    
+    /* -------------------       Proyectos      ---------------------*/
+/* -------------------       Cards       ---------------------*/
+.card{
+    background-color: #f4efef85;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 15px auto;
+}
+}
+@media (max-width: 400px) {
+    .return {
+        justify-content: center;
+    }    
+    .icon-habilidad{
+        width: 48px;
+    }
+}
+@keyframes subrayadoin {
+    from { 
+        border-bottom: 1px solid;
+        border-left: 1px solid;
+        border-radius: 5px;
+    }
+    to { 
+        border-top: 4px solid;
+        border-right: 1px solid;
+        border-radius: 5px;
+        box-shadow: 0 4px 6px 6px var(--white);
+    }
+    
 }

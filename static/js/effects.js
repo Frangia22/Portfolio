@@ -36,3 +36,19 @@ menubtn.addEventListener("click", () => {
 	nav.classList.toggle("desplegar");     
    changeIcon.classList.toggle('burger-cruz'); 
 });
+const mes = ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio', 'Agosto', 'Septiembre', 'Octubre', 'Noviembre', 'Diciembre'];
+const diaSemana = ['Domingo', 'Lunes', 'Martes', 'Miercoles', 'Jueves', 'Viernes', 'Sabado'];
+const fecha = new Date();
+const getHora = fecha.getHours();
+const saludo = () => {
+   if (getHora > 7 && getHora < 12) {
+      return(`<b>Buenas dias!!</b>`);
+   }else if (getHora > 12 && getHora < 21) {
+      return(`<b>Buenas tardes!!</b>`);
+   }else if (getHora > 21) {
+      return(`<b>Buenas noches!!</b>`);
+   }
+}
+const fechaHoy = `${diaSemana[fecha.getDay()]}, ${fecha.getDate()} de ${mes[fecha.getMonth()]} de ${fecha.getFullYear()}, ${saludo()}`;
+const banner = document.querySelector('#banner');
+banner.innerHTML = fechaHoy;

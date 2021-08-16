@@ -45,7 +45,9 @@ const saludo = () => {
       return(`<b>Buenas dias!!</b>`);
    }else if (getHora > 12 && getHora < 21) {
       return(`<b>Buenas tardes!!</b>`);
-   }else if (getHora > 21) {
+   }else if (getHora > 21 ) {
+      return(`<b>Buenas noches!</b>`);
+   }else {
       return(`<b>Buenas noches!!</b>`);
    }
 }

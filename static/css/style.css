@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=Exo+2:wght@500&family=Gloria+Hallelujah&family=Kaushan+Script&display=swap');
 /* -------------------------------- Variables -------------------------------- */
 :root{
     --blue: #25294A;
@@ -18,7 +18,7 @@
 }
 body{
     background-color: var(--gradiantfond);
-    font-family: 'Exo 2', sans-serif;
+    font-family: 'Gloria Hallelujah', 'Caveat', 'Exo 2', sans-serif, arial, helvetica;
 }
 img{
     max-width: 100%;
@@ -74,6 +74,7 @@ img{
     color: var(--black);
     display: inline-block;
     position: relative;
+    top: -6px;
 }
 .center {
     position: absolute;
@@ -154,6 +155,12 @@ img{
     display: grid;
     grid-template-columns: repeat(2,1fr);
     margin: 15px auto;
+}
+.card:nth-child(2n+1) {
+    background-image: url(/static/img/pattern-blue.svg);
+    background-repeat: space;
+    background-position: center;
+    background-blend-mode: overlay;
 }
 .about{
     flex: 1 1;
@@ -308,6 +315,9 @@ footer .container{
 }
 }
 @media (max-width: 400px) {
+    body{
+        font-family: 'Exo 2', 'Caveat', sans-serif, arial, helvetica;
+    }
     .return {
         justify-content: center;
     }    
@@ -334,6 +344,6 @@ footer .container{
         left: 600px;
     }
     to {
-        left: -200px;
+        left: -400px;
     }
 }
